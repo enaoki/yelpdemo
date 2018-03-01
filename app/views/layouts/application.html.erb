@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yelpdemo</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= render 'layouts/bootstrap' %>   
+  </head>
+
+  <body>
+    <%#=
+      "_" para indicar partial e "=" para quando houver retorno 
+      loop ou iniciar variável não precisaria do "<%=" apenas "<%"
+    %>
+    <%= render 'layouts/navbar' %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+  </body>
+</html>
