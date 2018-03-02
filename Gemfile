@@ -49,15 +49,19 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
+# enaoki - altera para banco de produção ser postgree e não sqlite3
 group :production do
   gem 'pg'
 end
-
+# enaoki - file uploader
 gem 'carrierwave'
+# enaoki - image resize
 gem 'mini_magick'
+# enaoki - notifications
+gem 'devise'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# enaoki - define versão por causa do Heroku
 ruby "2.5.0"
