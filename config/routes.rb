@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :reviews, except: [:show, :index]
   devise_for :users
-  resources :restaurants
+  # rails routes para um model depender do outro
+  resources :restaurants do
+    collection do
+      get 'search'
+    end
+    resources :reviews, except: [:show, :index]
+  end
   get 'pages/about'
 
   get 'pages/contact'
